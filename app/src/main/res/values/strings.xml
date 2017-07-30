@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">ContactAppWithSqlite</string>
+    <string name="action_settings">Settings</string>
+    <string name="LoginActivity_txtLogin_text">Login</string>
+    <string name="LoginActivity_etUsername_hint">Username</string>
+    <string name="LoginActivity_etPassword_hint">Password</string>
+    <string name="LoginActivity_btnLogin_text">Login</string>
+    <string name="LoginActivity_btnReset_text">Reset</string>
+    <string name="title_activity_contact">ContactSearch</string>
+    <string name="Contactactivity_etSearch_hint">Search</string>
+    <string name="title_activity_add_contact">AddContact</string>
+    <string name="AddContactActivity_etFirstName_hint">FirstName</string>
+    <string name="AddContactActivity_etLastName_hint">LastName</string>
+    <string name="AddContactActivity_etMobile_hint">Mobile</string>
+    <string name="AddContactActivity_etEmail_hint">Email</string>
+    <string name="AddContactActivity_etDob_hint">Dob</string>
+    <string name="AddContactActivity_btnSave_text">Save</string>
+    <string name="AddContactActivity_btnClear_text">Clear</string>
+    <string name="title_activity_view_contact"></string>
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="type_prompt">Choose a type</string>
+    <string-array name="type_arrays">
+        <item>Friend</item>
+        <item>Family</item>
+    </string-array>
+    <string name="title_activity_sign_up">SignUpActivity</string>
+
+</resources>

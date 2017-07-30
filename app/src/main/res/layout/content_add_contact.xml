@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/red1">
+
+    <RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        style="@style/RelLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.developtech.contactappwithsqlite.AddContactActivity">
+
+        <TextView
+            android:id="@+id/txtType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:text="ContactType"
+            android:textSize="@dimen/activity_horizontal_margin" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/txtType"
+            android:layout_alignEnd="@+id/FirstName"
+            android:layout_alignRight="@+id/FirstName"
+            android:layout_toRightOf="@+id/image"
+            android:entries="@array/type_arrays"
+            android:prompt="@string/type_prompt">
+
+        </Spinner>
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="145dp"
+            android:layout_height="130dp"
+            android:layout_below="@id/txtType"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:scaleType="fitStart"
+            android:src="@drawable/sign_up_256" />
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/FirstName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/Mobile"
+            android:layout_alignRight="@+id/Mobile"
+            android:layout_alignTop="@+id/image"
+            android:layout_toRightOf="@+id/image"
+            app:hintTextAppearance="@style/Color">
+
+            <EditText
+                android:id="@+id/etFirstName"
+                style="@style/Hint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/AddContactActivity_etFirstName_hint"
+                android:singleLine="true" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/LasttName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/Mobile"
+            android:layout_alignRight="@+id/Mobile"
+            android:layout_below="@id/FirstName"
+            android:layout_toRightOf="@id/image"
+            app:hintTextAppearance="@style/Color"
+
+            >
+
+            <EditText
+                android:id="@+id/etLastName"
+                style="@style/Hint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/AddContactActivity_etLastName_hint"
+                android:singleLine="true" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/Mobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/image"
+            app:hintTextAppearance="@style/Color">
+
+            <EditText
+                android:id="@+id/etMobile"
+                style="@style/Hint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/AddContactActivity_etMobile_hint"
+                android:inputType="number"
+                android:maxLength="10"
+                android:singleLine="true" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/Email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Mobile"
+            app:hintTextAppearance="@style/Color">
+
+            <EditText
+                android:id="@+id/etEmail"
+                style="@style/Hint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/AddContactActivity_etEmail_hint"
+                android:singleLine="true" />
+        </android.support.design.widget.TextInputLayout>
+
+        <LinearLayout
+            android:id="@+id/l1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Email"
+            android:weightSum="3">
+
+            <TextView
+                android:id="@+id/txtDob"
+                style="@style/Hint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:hint="@string/AddContactActivity_etDob_hint"
+                android:singleLine="true" />
+
+            <Button
+                android:id="@+id/btnDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/maroon1"
+                android:text="..." />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/txtUpload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/txtType"
+            android:layout_alignRight="@+id/txtType"
+            android:layout_below="@+id/FirstName"
+            android:onClick="open"
+            android:text="Upload" />
+
+
+        <CheckBox
+            android:id="@+id/chkReminder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/l1"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:text="Bday Reminder" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/chkReminder"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/maroon"
+                android:text="@string/AddContactActivity_btnSave_text"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btnClear"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@color/maroon"
+                android:text="@string/AddContactActivity_btnClear_text"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</ScrollView>
